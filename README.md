@@ -1,2 +1,2 @@
-# work-plugin-octobercms
+# work
 Portfolio plugin for OctoberCMS
