@@ -1,0 +1,41 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    id:
+        label: ID
+        disabled: true
+    name:
+      label: Nombre
+      required: true
+      type: text
+    description:
+      label: Descripción
+      required: true
+      type: textarea
+    long_description:
+      label: Descripción larga
+      type: richeditor
+    content:
+      label: Contenido
+      required: true
+      type: richeditor
+    workdate:
+      label: Fecha del proyecto
+      type: datepicker
+      mode: date
+    url:
+      label: URL
+      type: text
+    published:
+      label: publicado
+      type: checkbox
+    featured_image:
+      label: Imagen destacada
+      type: fileupload
+      mode: image
+      imageWidth: 600
+      imageHeight: 387
+      useCaption: true
+

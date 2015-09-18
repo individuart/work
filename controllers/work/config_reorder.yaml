@@ -1,0 +1,20 @@
+# ===================================
+#  Reorder Behavior Config
+# ===================================
+
+# Reorder Title
+title: Reordenar Trabajos
+
+# Attribute name
+nameFrom: name
+
+# Model Class name
+modelClass: Individuart\Work\Models\Work
+
+# Toolbar widget configuration
+toolbar:
+    # Partial for toolbar buttons
+    buttons: reorder_toolbar
+    # Search widget configuration
+    search:
+        prompt: backend::lang.list.search_prompt

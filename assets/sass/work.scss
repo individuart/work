@@ -1,0 +1,267 @@
+$tablet-min: 480px;
+$tablet-max: 960px;
+$desktop: 1280px;
+
+@import "compass/css3";
+@import "breakpoint";
+
+.work-section{
+  //margin-top: 50px;
+
+}
+.work-section__title{
+  display: block;
+  //width: 80%;
+  margin: 0px auto 20px;
+  font-family: 'Josefin Sans';
+  font-size: 30px;
+  background-color: #EE3B86;
+  text-align: center;
+  color: #fff;
+  padding: 10px;
+  @include breakpoint($tablet-min){
+    font-size:35px;
+    //width: 40%;
+  }
+}
+
+.work{
+  @include inline-block;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  border: 5px solid #fff;
+  @include breakpoint(600px){
+    width: 47%;
+    margin: 0 0 20px 2%;
+  }
+  @include breakpoint($desktop){
+    width: 30.6%;
+    margin: 0 0 30px 2%;
+  }
+  &:hover{
+    .work__image{
+      @include transform(scale(1.2));
+      @include opacity(0.3);
+    }
+    .work__info{
+      @include opacity(1);
+    }
+  }
+}
+.work__background{
+  display: block;
+  width: 100%;
+}
+.work__image{
+  @include transition(opacity 0.2s ease-in-out, transform 0.2s);
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.work__info{
+  @include opacity(0);
+  @include transition(opacity 0.3s ease-in-out);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.work__infotable {
+  display: table;
+  width: 100%;
+  height: 100%;
+  z-index: 400;
+}
+.work__infocell{
+  display:table-cell;
+  vertical-align: middle;
+  text-align: center;
+  padding: 10px;
+  @include breakpoint($tablet-min){
+    padding: 20px;
+  }
+}
+.work__title{
+  //oculto el texto para que no aparezca antes de la animacion
+  visibility: hidden;
+  font-size: 28px;
+  font-family: 'Open Sans';
+  font-weight: 700;
+  color: #EE3B86;
+  //background-color: #EE3B86;
+  border-bottom: 2px solid #EE3B86;
+  margin: 0 0 15px;
+  @include breakpoint($tablet-min){
+    font-size: 40px;
+  }
+}
+.work__subtitle{
+  font-family: 'Josefin Sans';
+  font-size: 16px;
+  margin: 0 0 15px;
+  @include breakpoint($tablet-min){
+    font-size: 20px;
+    margin: 0 0 25px;
+  }
+}
+.work__button{
+  @include transition(background-color 0.2s, color 0.2s);
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+  padding: 5px 10px;
+  border: 2px solid #fff;
+  color: #fff;
+  @include breakpoint($tablet-min){
+    width: 50%;
+    padding: 10px 15px;
+  }
+  &:hover{
+    background-color: rgb(238,59,134);
+    background-color: rgba(238,59,134,0.5);
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+.work-background{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  overflow: scroll;
+  //background-color: rgba(0,0,0,0.8);
+}
+
+.work-info{
+  background: #fff;
+  padding: 25px 2%;
+
+  @include breakpoint($tablet-min){
+    width: 40%;
+    height: 100%;
+    position:fixed;
+    top: 0;
+    right: 0;
+    margin-left: 5%;
+    padding: 50px 2%;
+  }
+  @include breakpoint($tablet-max){
+    width: 30%;
+  }
+}
+.work-detail{
+  padding: 25px 2%;
+  font-size: 18px;
+  line-height: 1.2;
+  color: #e4e4e4;
+  @include breakpoint($tablet-min){
+    padding: 50px 5%;
+    width: 60%;
+  }
+  @include breakpoint($tablet-max){
+    width: 70%;
+  }
+  @include breakpoint($desktop){
+    padding: 25px 12%;
+  }
+  p{
+    margin-bottom: 30px;
+  }
+  a{
+    color:#fff;
+  }
+  img{
+    display: block;
+    width: 100%;
+  }
+}
+.work-close{
+  @include transition(all 0.3s ease-in-out);
+  cursor: pointer;
+  position: fixed;
+  top: 10px;
+  right: 30px;
+  &:hover{
+    @include transform(rotate(-90deg));
+  }
+  @include breakpoint($tablet-min) {
+    position: absolute;
+  }
+}
+#workdetail{
+  display: none;
+}
+.work-detail__title{
+  color: #EE3B86;
+  font-family: 'Open Sans';
+  font-weight: 700;
+  font-size: 45px;
+}
+.work-detail__subtitle{
+  font-weight: 300;
+  font-size: 25px;
+  color: #474747;
+}
+.work-detail__content{
+  img{
+    width: 100%;
+    max-width: 930px;
+  }
+  p{
+    font-size: 20px;
+    line-height: 1.4;
+  }
+  h2{
+    @include inline-block;
+    background: #EE3B86;
+    padding: 10px 20px;
+    font-family: 'Open Sans';
+    font-size: 16px;
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+}
+.work-detail__link{
+  @include inline-block;
+  @include transition(color 0.2s ease-out, background-color 0.2s ease-out);
+  border:1px solid #EE3B86;
+  font-family: 'Josefin Sans';
+  font-weight: 400;
+  font-size: 25px;
+  text-transform: lowercase;
+  padding: 8px 20px;
+  color: #EE3B86;
+  text-decoration: none;
+  margin: 20px 0 0;
+
+  &:hover{
+    background: #EE3B86;
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+.work-detail__longdesc{
+  border-top: 1px solid #b1b1b1;
+  border-bottom: 1px solid #b1b1b1;
+  padding: 20px 0;
+  color: #4c4c4c;
+  font-size: 16px;
+  margin: 20px 0 0;
+  p{
+    margin: 0 0 15px;
+  }
+}
+
+.stripe-loading-indicator .stripe, .stripe-loading-indicator .stripe-loaded{
+  background: #EE3B86 !important;
+}

@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Trabajo
+
+# Model Form Field configuration
+form: $/individuart/work/models/work/fields.yaml
+
+# Model Class name
+modelClass: Individuart\Work\Models\Work
+
+# Default redirect location
+defaultRedirect: individuart/work/work
+
+# Create page
+create:
+    title: Crear Trabajo
+    redirect: individuart/work/work/update/:id
+    redirectClose: individuart/work/work
+
+# Update page
+update:
+    title: Editar Trabajo
+    redirect: individuart/work/work
+    redirectClose: individuart/work/work
+
+# Preview page
+preview:
+    title: Previsualizar Trabajo

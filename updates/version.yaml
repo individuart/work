@@ -1,0 +1,12 @@
+1.0.1:
+      - First version of Work & create works table
+      - create_works_table.php
+1.0.2:
+      - Add url field to works table
+      - add_url_works_table.php
+1.0.3:
+      - Add long description to works table
+      - add_long_desc_works_table.php
+1.0.4:
+      - Add sort_order to works table
+      - add_sort_order_works_table.php

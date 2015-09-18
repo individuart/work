@@ -1,0 +1,18 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: ID
+        searchable: true
+    published:
+      label: publicado
+      type: switch
+    name:
+      label: nombre
+      searchable: true
+    image:
+      label: imagen
+      sortable: no
+      type: image
