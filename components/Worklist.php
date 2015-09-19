@@ -22,8 +22,8 @@ class Worklist extends ComponentBase
 
     public function onRun()
     {
-        $this->addJs('assets/js/work.js');
-        $this->addCss('assets/css/work.css');
+        $this->addJs('assets/js/work.min.js');
+        $this->addCss('assets/css/work.min.css');
 
        $this->works = Work::published()->orderBy('sort_order','asc')->get();
 
