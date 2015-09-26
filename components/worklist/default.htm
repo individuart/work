@@ -1,7 +1,7 @@
 {% set works = __SELF__.works %}
 <div class="work-list">
     {% for work in works %}<div class="work" id="work{{work.id}}">
-        <img class="work__background" src="{{ 'assets/images/fnd-work.gif' | theme}}" alt="">
+        <img class="work__background" src="{{ 'plugins/individuart/work/assets/images/fnd-work.gif'}}" alt="">
         <img class="work__image" src="{{work.featured_image.path}}" alt="{{work.name}}">
         <div class="work__info">
             <div class="work__infotable">
@@ -18,11 +18,12 @@
 
 <div id="workdetail"></div>
 
+
 {#
 
 <div class="work-background">
     <div class="work-info">
-        <img src="{{ 'assets/images/btn-close.svg' | theme}}" class="work-close">
+        <img src="{{ 'plugins/individuart/work/assets/images/btn-close.svg'}}" class="work-close">
         <h2 class="work-detail__title">{{works[1].name}}</h2>
         <h3 class="work-detail__subtitle">{{works[1].description}}</h3>
     </div>

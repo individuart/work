@@ -1,20 +1,15 @@
 # work
 
-##Portfolio plugin for OctoberCMS
+## AJAX based Portfolio plugin for OctoberCMS
 
-This plugin allow to create a portfolio into octobercms.
+With this plugin you can create a portfolio into OctoberCMS.
 
-There is a component called worklist with two layouts. The datail portfolio page is loaded using ajax.
+The plugin has a Component called Worklist that you can insert from the backend in any page you want to. 
 
-I use a compressed version of CSS but I have included and uncompressed version of the CSS and the **SASS files coded with compass** for modifying anything you want.
+You have a list of works and forms to create and edit each item of the portfolio. I have used the Sortable Trait to order by drag & drop the items of the  portfolio list.
 
-In the backend you can choose an image for each work and order them by drag & drop.
+This plugin needs JQuery. You can import it in your theme, for example.
 
-Clone git repository into a folder called individuart inside folder plugins of OctoberCMS:
+In order to work properly, this plugin needs October Ajax Framework https://octobercms.com/docs/cms/ajax
 
-`git clone https://github.com/individuart/work` 
-
-The final route may be something like:
-
-**[octobercms-folder]/plugins/individuart/work**
-
+You can use it in your layout using the twigg tag  {% framework extras %}

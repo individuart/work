@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 .work-section__title {
   display: block;
   margin: 0px auto 20px;

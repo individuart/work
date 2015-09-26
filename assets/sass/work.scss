@@ -5,6 +5,10 @@ $desktop: 1280px;
 @import "compass/css3";
 @import "breakpoint";
 
+*{
+  box-sizing: border-box;
+}
+
 .work-section{
   //margin-top: 50px;
 
