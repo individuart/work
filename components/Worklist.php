@@ -27,8 +27,10 @@ class Worklist extends ComponentBase
 
        $this->works = Work::published()->orderBy('sort_order','asc')->get();
 
-        foreach($this->works as $work){
-            $work['slug'] = Str::slug($work['name']);
+        if($this->works) {
+            foreach ($this->works as $work) {
+                $work['slug'] = Str::slug($work['name']);
+            }
         }
 
     }

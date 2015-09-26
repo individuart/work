@@ -15,7 +15,7 @@ class CreateWorksTable extends Migration
             $table->string('name',200);
             $table->string('description',200);
             $table->text('content');
-            $table->date('workdate');
+            $table->date('workdate')->nullable();
             $table->boolean('published',false);
             $table->timestamps();
         });
