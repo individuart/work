@@ -3,7 +3,7 @@
 use Schema;
 use October\Rain\Database\Updates\Migration;
 
-class AddUrlWorksTable extends Migration
+class AddSortOrderWorksTable extends Migration
 {
 
 
