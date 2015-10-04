@@ -23,6 +23,9 @@ return [
         'preview_work' => 'Preview Work',
         'manage_works' => 'Manage Works',
         'reorder_works' => 'Reorder Works',
-        'return_work_list' => 'Return to work list'
+        'return_work_list' => 'Return to work list',
+        'successfully_deleted' => 'Successfully deleted those works',
+        'delete_confirm' => 'Really delete selected works?',
+        'delete_selected' => 'Delete selected'
     ]
 ];

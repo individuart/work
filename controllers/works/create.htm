@@ -1,6 +1,6 @@
 <?php Block::put('breadcrumb') ?>
     <ul>
-        <li><a href="<?= Backend::url('individuart/work/work') ?>"><?= e(trans('individuart.work::lang.backend.work'))?></a></li>
+        <li><a href="<?= Backend::url('individuart/work/works') ?>"><?= e(trans('individuart.work::lang.backend.works'))?></a></li>
         <li><?= e($this->pageTitle) ?></li>
     </ul>
 <?php Block::endPut() ?>
@@ -18,30 +18,22 @@
                 <button
                     type="submit"
                     data-request="onSave"
-                    data-request-data="redirect:0"
                     data-hotkey="ctrl+s, cmd+s"
-                    data-load-indicator="Saving Work..."
+                    data-load-indicator="<?= e(trans('backend::lang.form.creating')) ?>"
                     class="btn btn-primary">
-                    <u></u><?= e(trans('backend::lang.form.save')) ?>
+                    <?= e(trans('backend::lang.form.create')) ?>
                 </button>
                 <button
                     type="button"
                     data-request="onSave"
                     data-request-data="close:1"
                     data-hotkey="ctrl+enter, cmd+enter"
-                    data-load-indicator="Saving Work..."
+                    data-load-indicator="<?= e(trans('backend::lang.form.creating')) ?>"
                     class="btn btn-default">
-                    <?= e(trans('backend::lang.form.save_and_close')) ?>
-                </button>
-                <button
-                    type="button"
-                    class="oc-icon-trash-o btn-icon danger pull-right"
-                    data-request="onDelete"
-                    data-load-indicator="Borrando Trabajo..."
-                    data-request-confirm="Do you really want to delete this work?">
+                    <?= e(trans('backend::lang.form.create_and_close')) ?>
                 </button>
                 <span class="btn-text">
-                    or <a href="<?= Backend::url('individuart/work/work') ?>"><?= e(trans('backend::lang.form.cancel')) ?></a>
+                    <?= e(trans('backend::lang.form.or')) ?> <a href="<?= Backend::url('individuart/work/work') ?>"><?= e(trans('backend::lang.form.cancel')) ?></a>
                 </span>
             </div>
         </div>
@@ -51,6 +43,6 @@
 <?php else: ?>
 
     <p class="flash-message static error"><?= e($this->fatalError) ?></p>
-    <p><a href="<?= Backend::url('individuart/work/work') ?>" class="btn btn-default"><?= e(trans('individuart.work::lang.backend.return_work_list'))?></a></p>
+    <p><a href="<?= Backend::url('individuart/work/works') ?>" class="btn btn-default">Return to work list</a></p>
 
 <?php endif ?>

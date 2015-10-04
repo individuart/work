@@ -23,6 +23,9 @@ return [
         'preview_work' => 'Previsualizar Trabajo',
         'manage_works' => 'Gestionar Trabajos',
         'reorder_works' => 'Reordenar Trabajos',
-        'return_work_list' => 'Volver al listado de trabajos'
+        'return_work_list' => 'Volver al listado de trabajos',
+        'successfully_deleted' => 'Trabajos eliminados correctamente',
+        'delete_confirm' => '¿Deseas borrar los trabajos seleccionados?',
+        'delete_selected' => 'Borrar seleccionados'
     ]
 ];

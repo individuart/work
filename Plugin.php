@@ -36,7 +36,7 @@ class Plugin extends PluginBase
         return [
             'work' => [
                 'label' => 'Work',
-                'url'   => Backend::url('individuart/work/work'),
+                'url'   => Backend::url('individuart/work/works'),
                 'icon'  => 'icon-desktop',
                 'order' => 500
             ]
