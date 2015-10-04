@@ -1,4 +1,4 @@
-/*$('.work__title').textillate({
+$('.work__title').textillate({
     in: {
         // set the effect name
         effect: 'rotateInDownRight',
@@ -28,7 +28,7 @@
 $('.work').on('mouseenter',function(){
     $(this).find('.work__title').textillate('start');
 });
-*/
+
 
 $('.work__button').on('click',function(ev){
     idwork = $(this).parent().parent().parent().parent().attr('id').replace('work','');

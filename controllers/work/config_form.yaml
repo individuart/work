@@ -3,7 +3,7 @@
 # ===================================
 
 # Record name
-name: Trabajo
+name: individuart.work::lang.backend.work
 
 # Model Form Field configuration
 form: $/individuart/work/models/work/fields.yaml
@@ -16,16 +16,16 @@ defaultRedirect: individuart/work/work
 
 # Create page
 create:
-    title: Crear Trabajo
+    title: individuart.work::lang.backend.create_work
     redirect: individuart/work/work/update/:id
     redirectClose: individuart/work/work
 
 # Update page
 update:
-    title: Editar Trabajo
+    title: individuart.work::lang.backend.edit_work
     redirect: individuart/work/work
     redirectClose: individuart/work/work
 
 # Preview page
 preview:
-    title: Previsualizar Trabajo
+    title: individuart.work::lang.backend.preview_work

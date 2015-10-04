@@ -18,7 +18,7 @@ class Plugin extends PluginBase
     {
         return [
             'name'        => 'Work',
-            'description' => 'A collection of works',
+            'description' => 'individuart.work::lang.plugin.description',
             'author'      => 'Individuart',
             'icon'        => 'icon-desktop'
         ];

@@ -9,7 +9,7 @@ list: $/individuart/work/models/work/columns.yaml
 modelClass: Individuart\Work\Models\Work
 
 # List Title
-title: Manage Works
+title: individuart.work::lang.backend.manage_works
 
 # Link URL for each record
 recordUrl: individuart/work/work/update/:id

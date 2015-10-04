@@ -20,7 +20,7 @@ module.exports = function(grunt) {
         uglify : {
             js: {
                 files: {
-                    'js/work.min.js' : [ 'js/work.min.js' ]
+                    'js/work.min.js' : [ 'js/work.js' ]
                 }
             }
         }       

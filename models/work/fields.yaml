@@ -7,32 +7,32 @@ fields:
         label: ID
         disabled: true
     name:
-      label: Nombre
+      label: individuart.work::lang.backend.label_name
       required: true
       type: text
     description:
-      label: Descripción
+      label: individuart.work::lang.backend.label_description
       required: true
       type: textarea
     long_description:
-      label: Descripción larga
+      label: individuart.work::lang.backend.label_long_description
       type: richeditor
     content:
-      label: Contenido
+      label: individuart.work::lang.backend.label_content
       required: true
       type: richeditor
     workdate:
-      label: Fecha del proyecto
+      label: individuart.work::lang.backend.label_work_date
       type: datepicker
       mode: date
     url:
       label: URL
       type: text
     published:
-      label: publicado
+      label: individuart.work::lang.backend.label_published
       type: checkbox
     featured_image:
-      label: Imagen destacada
+      label: individuart.work::lang.backend.label_featured_image
       type: fileupload
       mode: image
       imageWidth: 600
