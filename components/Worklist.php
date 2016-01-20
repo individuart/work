@@ -25,10 +25,8 @@ class Worklist extends ComponentBase
 
     public function onRun()
     {
-        //$this->addJs('assets/js/work.min.js');
-        //$this->addCss('assets/css/work.min.css');
-        $this->addJs('assets/js/work.js');
-        $this->addCss('assets/css/work.css');
+        $this->addJs('assets/js/work.min.js');
+        $this->addCss('assets/css/work.min.css');
 
         $this->addCss('https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin,latin-ext');
         $this->addCss('https://fonts.googleapis.com/css?family=Josefin+Sans:400,300,300italic,400italic,700,700italic');
