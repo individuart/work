@@ -38,4 +38,8 @@ fields:
       imageWidth: 600
       imageHeight: 387
       useCaption: true
+    categories:
+      label: individuart.work::lang.backend.category
+      type: relation
+      nameFrom: name
 

@@ -2,17 +2,16 @@
 
 use Model;
 
-
 /**
- * Work Model
+ * Category Model
  */
-class Work extends Model
+class Category extends Model
 {
     use \October\Rain\Database\Traits\Sortable; //necesito esta clase para reordenar en el listado
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'individuart_work_works';
+    public $table = 'individuart_work_categories';
 
     /**
      * @var array Guarded fields
@@ -24,8 +23,6 @@ class Work extends Model
      */
     protected $fillable = [];
 
-    protected $sortMode = 'simple';
-
     /**
      * @var array Relations
      */
@@ -33,26 +30,13 @@ class Work extends Model
     public $hasMany = [];
     public $belongsTo = [];
     public $belongsToMany = [
-        'categories' => ['Individuart\Work\Models\Category','table'=>'individuart_work_category_work']
+        'works' => ['Individuart\Work\Models\Work','table'=>'individuart_work_category_work']
     ];
     public $morphTo = [];
     public $morphOne = [];
     public $morphMany = [];
-    public $attachOne = [
-        'featured_image' => ['System\Models\File']
-    ];
+    public $attachOne = [];
     public $attachMany = [];
-
-    public function getImageAttribute(){
-        $trabajo = Work::find($this->id);
-        if($trabajo->featured_image)
-        {
-            return '<img src="' . $trabajo->featured_image->getThumb(50, 50, 'crop') . '">';
-        }else
-        {
-            return '';
-        }
-    }
 
     public function scopePublished($query)
     {

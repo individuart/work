@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: individuart.work::lang.backend.category
+
+# Model Form Field configuration
+form: $/individuart/work/models/category/fields.yaml
+
+# Model Class name
+modelClass: Individuart\Work\Models\Category
+
+# Default redirect location
+defaultRedirect: individuart/work/categories
+
+# Create page
+create:
+    title: individuart.work::lang.backend.create_category
+    redirect: individuart/work/categories/update/:id
+    redirectClose: individuart/work/categories
+
+# Update page
+update:
+    title: individuart.work::lang.backend.edit_category
+    redirect: individuart/work/categories
+    redirectClose: individuart/work/categories
+
+# Preview page
+preview:
+    title: individuart.work::lang.backend.preview_category

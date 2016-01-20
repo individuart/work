@@ -10,3 +10,7 @@
 1.0.4:
       - Add sort_order to works table
       - add_sort_order_works_table.php
+1.1.0:
+      - Add categories and category_work tables
+      - create_categories_table.php
+      - create_category_work_table.php

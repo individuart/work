@@ -9,10 +9,6 @@ columns:
     name:
       label: individuart.work::lang.backend.label_name
       searchable: true
-    image:
-      label: individuart.work::lang.backend.label_image
-      sortable: no
-      type: image
     sort_order:
       label: individuart.work::lang.backend.label_order
     published:

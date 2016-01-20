@@ -46,3 +46,28 @@ $('body').on('click','.work-close',function(){
     $('#workdetail').fadeOut(500);
     $('.work-background').fadeOut(500,function(){this.remove()});
 })
+
+$('.work-category').on('click',function(){
+    cat_id = parseInt(this.id.replace('cat-',''));
+    console.log(cat_id);
+    if(cat_id==0){
+        //$('.work').css('display','inline-block');
+        $('.work').each(function(){
+           if($(this).css('display')=='none'){
+               $(this).fadeIn(200);
+           }
+        });
+    }else{
+        //$('.work').css('display','none');
+        //$('.cat-' + cat_id).css('display','inline-block');
+        $('.work').each(function(){
+            if(!$(this).hasClass('cat-'+cat_id)){
+                $(this).fadeOut(200);
+            }else{
+                $(this).fadeIn(200);
+            }
+        });
+    }
+    $('.work-category').removeClass('selected');
+    $(this).addClass('selected');
+})

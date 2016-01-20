@@ -1,6 +1,17 @@
+{% set categories = __SELF__.categories %}
 {% set works = __SELF__.works %}
+
+{% if categories is not empty %}
+<div class="work-categories">
+    <div class="work-category selected" id="cat-0">{{ 'all categories' |_}}</div>
+    {% for cat in categories %}
+    <div class="work-category" id="cat-{{cat.id}}">{{cat.name}}</div>
+    {% endfor %}
+</div>
+{% endif %}
+
 <div class="work-list">
-    {% for work in works %}<div class="work" id="work{{work.id}}">
+    {% for work in works %}<div class="work {{work.css_categories}}" id="work{{work.id}}">
         <img class="work__background" src="{{ 'plugins/individuart/work/assets/images/fnd-work.gif'}}" alt="">
         <img class="work__image" src="{{work.featured_image.path}}" alt="{{work.name}}">
         <div class="work__info">
@@ -8,7 +19,7 @@
                 <div class="work__infocell">
                     <h2 class="work__title">{{ work.name}}</h2>
                     <h3 class="work__subtitle">{{work.description}}</h3>
-                    <a href="#view-work/{{work.id}}/{{ work.slug }}" class="work__button">ver proyecto</a>
+                    <a href="#view-work/{{work.id}}/{{ work.slug }}" class="work__button">{{ 'view project'|_}}</a>
                 </div>
             </div>
     </div>
@@ -17,19 +28,3 @@
 </div>
 
 <div id="workdetail"></div>
-
-
-{#
-
-<div class="work-background">
-    <div class="work-info">
-        <img src="{{ 'plugins/individuart/work/assets/images/btn-close.svg'}}" class="work-close">
-        <h2 class="work-detail__title">{{works[1].name}}</h2>
-        <h3 class="work-detail__subtitle">{{works[1].description}}</h3>
-    </div>
-    <div class="work-detail">
-
-        <div class="work-detail__content">{{works[1].content | raw}}</div>
-    </div>
-</div>
-#}

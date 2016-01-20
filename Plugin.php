@@ -38,7 +38,21 @@ class Plugin extends PluginBase
                 'label' => 'Work',
                 'url'   => Backend::url('individuart/work/works'),
                 'icon'  => 'icon-desktop',
-                'order' => 500
+                'order' => 500,
+
+                'sideMenu' => [
+                    'works' => [
+                        'label' => 'individuart.work::lang.backend.works',
+                        'icon' => 'icon-desktop',
+                        'url' => Backend::url('individuart/work/works'),
+                    ],
+                'categories' => [
+                        'label' => 'individuart.work::lang.backend.categories',
+                        'icon' => 'icon-folder',
+                        'url' => Backend::url('individuart/work/categories'),
+                    ]
+
+                ]
             ]
         ];
     }

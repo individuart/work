@@ -105,13 +105,14 @@
 }
 
 .work__title {
-  visibility: hidden;
   font-size: 28px;
   font-family: 'Open Sans';
   font-weight: 700;
   color: #EE3B86;
-  border-bottom: 2px solid #EE3B86;
   margin: 0 0 15px;
+}
+.work__title a {
+  text-decoration: none;
 }
 @media (min-width: 480px) {
   .work__title {
@@ -121,8 +122,10 @@
 
 .work__subtitle {
   font-family: 'Josefin Sans';
+  font-weight: 400;
   font-size: 16px;
   margin: 0 0 15px;
+  color: #fff;
 }
 @media (min-width: 480px) {
   .work__subtitle {
@@ -136,6 +139,9 @@
   -o-transition: background-color 0.2s, color 0.2s;
   -webkit-transition: background-color 0.2s, color 0.2s;
   transition: background-color 0.2s, color 0.2s;
+  font-family: 'Open Sans';
+  font-size: 18px;
+  font-weight: 300;
   display: block;
   width: 80%;
   margin: 0 auto;
@@ -259,6 +265,16 @@
   color: #474747;
 }
 
+.work-detail__categories {
+  font-family: 'Open Sans';
+  font-size: 14px;
+  line-height: 16px;
+  margin: 10px 0;
+  font-weight: 400;
+  color: #c0c0c0;
+  text-transform: uppercase;
+}
+
 .work-detail__content img {
   width: 100%;
   max-width: 930px;
@@ -312,13 +328,48 @@
   border-bottom: 1px solid #b1b1b1;
   padding: 20px 0;
   color: #4c4c4c;
+  font-family: 'Open Sans';
   font-size: 16px;
   margin: 20px 0 0;
 }
 .work-detail__longdesc p {
+  font-family: 'Open Sans';
+  font-size: 16px;
   margin: 0 0 15px;
 }
 
 .stripe-loading-indicator .stripe, .stripe-loading-indicator .stripe-loaded {
   background: #EE3B86 !important;
+}
+
+.work-categories {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.work-category {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  -moz-transition: background-color 0.2s ease-in-out;
+  -o-transition: background-color 0.2s ease-in-out;
+  -webkit-transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
+  border: 2px solid #fff;
+  color: #fff;
+  background-color: #838383;
+  padding: 6px 15px;
+  text-align: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-family: 'Open Sans';
+  font-size: 16px;
+  line-height: 18px;
+  margin: 0 1% 15px;
+}
+.work-category.selected, .work-category:hover {
+  background-color: #EE3B86;
+  color: #fff;
 }

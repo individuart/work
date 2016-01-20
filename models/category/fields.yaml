@@ -1,0 +1,19 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    id:
+        label: ID
+        disabled: true
+    name:
+      label: individuart.work::lang.backend.label_name
+      required: true
+      type: text
+    published:
+      label: individuart.work::lang.backend.label_published
+      type: checkbox
+    works:
+      label: individuart.work::lang.backend.work
+      type: relation
+      nameFrom: name

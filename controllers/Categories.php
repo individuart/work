@@ -2,19 +2,18 @@
 
 use BackendMenu;
 use Backend\Classes\Controller;
-use Individuart\Work\Models\Work;
+use Individuart\Work\Models\Category;
 use October\Rain\Support\Facades\Flash;
 
 /**
- * Work Back-end Controller
+ * Categories Back-end Controller
  */
-class Works extends Controller
+class Categories extends Controller
 {
     public $implement = [
         'Backend.Behaviors.FormController',
-        'Backend.Behaviors.ListController',
         'Backend.Behaviors.ReorderController',
-        'Backend.Behaviors.RelationController'
+        'Backend.Behaviors.ListController'
     ];
 
     public $formConfig = 'config_form.yaml';
@@ -26,29 +25,28 @@ class Works extends Controller
     {
         parent::__construct();
 
-        BackendMenu::setContext('Individuart.Work', 'work', 'works');
+        BackendMenu::setContext('Individuart.Work', 'work', 'categories');
     }
 
     public function index_onDelete()
     {
         if (($checkedIds = post('checked')) && is_array($checkedIds) && count($checkedIds)) {
 
-            foreach ($checkedIds as $workId) {
-                if (!$work = Work::find($workId))
-                    continue;
-                if($work->featured_image) {
-                    $work->featured_image->delete();
-                }
+            foreach ($checkedIds as $categoryId) {
 
-                //delete categories related with this work from relationship table
-                if($works = $work->categories)
+                if (!$category = Category::find($categoryId))
+                    continue;
+
+                //delete works related with category from relationship table
+                if($categories = $category->works)
                 {
-                    foreach($works as $w){
-                        $work->categories()->detach($w->id);
+                    foreach($categories as $cat){
+                        $category->works()->detach($cat->id);
                     }
                 }
 
-                $work->delete();
+                $category->delete();
+
             }
 
             Flash::success(e(trans('individuart.work::lang.backend.successfully_deleted')));
@@ -56,5 +54,4 @@ class Works extends Controller
 
         return $this->listRefresh();
     }
-
 }

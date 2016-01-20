@@ -1,0 +1,20 @@
+# ===================================
+#  Reorder Behavior Config
+# ===================================
+
+# Reorder Title
+title: individuart.work::lang.backend.reorder_categories
+
+# Attribute name
+nameFrom: name
+
+# Model Class name
+modelClass: Individuart\Work\Models\Category
+
+# Toolbar widget configuration
+toolbar:
+    # Partial for toolbar buttons
+    buttons: reorder_toolbar
+    # Search widget configuration
+    search:
+        prompt: backend::lang.list.search_prompt

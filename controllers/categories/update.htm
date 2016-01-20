@@ -1,6 +1,6 @@
 <?php Block::put('breadcrumb') ?>
     <ul>
-        <li><a href="<?= Backend::url('individuart/work/works') ?>"><?= e(trans('individuart.work::lang.backend.work'))?></a></li>
+        <li><a href="<?= Backend::url('individuart/work/categories') ?>"><?= e(trans('individuart.work::lang.backend.categories'))?></a></li>
         <li><?= e($this->pageTitle) ?></li>
     </ul>
 <?php Block::endPut() ?>
@@ -41,7 +41,7 @@
                     data-request-confirm="<?=e(trans('individuart.work::lang.backend.delete_confirm_record'))?>">
                 </button>
                 <span class="btn-text">
-                    or <a href="<?= Backend::url('individuart/work/works') ?>"><?= e(trans('backend::lang.form.cancel')) ?></a>
+                    or <a href="<?= Backend::url('individuart/work/categories') ?>"><?= e(trans('backend::lang.form.cancel')) ?></a>
                 </span>
             </div>
         </div>
@@ -51,6 +51,6 @@
 <?php else: ?>
 
     <p class="flash-message static error"><?= e($this->fatalError) ?></p>
-    <p><a href="<?= Backend::url('individuart/work/works') ?>" class="btn btn-default"><?= e(trans('individuart.work::lang.backend.return_to_list')) ?></a></p>
+    <p><a href="<?= Backend::url('individuart/work/categories') ?>" class="btn btn-default"><?= e(trans('individuart.work::lang.backend.return_to_list')) ?></a></p>
 
 <?php endif ?>

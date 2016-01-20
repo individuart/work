@@ -92,22 +92,27 @@ $desktop: 1280px;
 }
 .work__title{
   //oculto el texto para que no aparezca antes de la animacion
-  visibility: hidden;
+  //visibility: hidden;
   font-size: 28px;
   font-family: 'Open Sans';
   font-weight: 700;
   color: #EE3B86;
   //background-color: #EE3B86;
-  border-bottom: 2px solid #EE3B86;
+  //border-bottom: 2px solid #EE3B86;
   margin: 0 0 15px;
+  a{
+    text-decoration: none;
+  }
   @include breakpoint($tablet-min){
     font-size: 40px;
   }
 }
 .work__subtitle{
   font-family: 'Josefin Sans';
+  font-weight: 400;
   font-size: 16px;
   margin: 0 0 15px;
+  color: #fff;
   @include breakpoint($tablet-min){
     font-size: 20px;
     margin: 0 0 25px;
@@ -115,6 +120,9 @@ $desktop: 1280px;
 }
 .work__button{
   @include transition(background-color 0.2s, color 0.2s);
+  font-family: 'Open Sans';
+  font-size: 18px;
+  font-weight: 300;
   display: block;
   width: 80%;
   margin: 0 auto;
@@ -214,6 +222,17 @@ $desktop: 1280px;
   font-size: 25px;
   color: #474747;
 }
+
+.work-detail__categories{
+  font-family: 'Open Sans';
+  font-size: 14px;
+  line-height: 16px;
+  margin: 10px 0;
+  font-weight: 400;
+  color: #c0c0c0;
+  text-transform: uppercase;
+}
+
 .work-detail__content{
   img{
     width: 100%;
@@ -259,13 +278,42 @@ $desktop: 1280px;
   border-bottom: 1px solid #b1b1b1;
   padding: 20px 0;
   color: #4c4c4c;
+  font-family: 'Open Sans';
   font-size: 16px;
   margin: 20px 0 0;
   p{
+    font-family: 'Open Sans';
+    font-size: 16px;
     margin: 0 0 15px;
   }
 }
 
 .stripe-loading-indicator .stripe, .stripe-loading-indicator .stripe-loaded{
   background: #EE3B86 !important;
+}
+
+
+
+.work-categories{
+  margin-bottom: 30px;
+  text-align: center;
+}
+.work-category{
+  @include inline-block;
+  @include transition(background-color 0.2s ease-in-out);
+  border: 2px solid #fff;
+  color:#fff;
+  background-color: #838383;
+  padding: 6px 15px;
+  text-align: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-family: 'Open Sans';
+  font-size: 16px;
+  line-height: 18px;
+  margin: 0 1% 15px;
+  &.selected, &:hover{
+    background-color: #EE3B86;
+    color: #fff;
+  }
 }

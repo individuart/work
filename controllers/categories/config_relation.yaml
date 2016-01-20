@@ -1,0 +1,13 @@
+# ===================================
+#  Relation Behavior Config
+# ===================================
+
+items:
+  label: individuart.work::lang.backend.work
+  view:
+    list: $/individuart/work/models/work/columns.yaml
+    toolbarButtons: create|delete
+  manage:
+    form: $/individuart/work/models/work/fields.yaml
+    recordsPerPage: 10
+
