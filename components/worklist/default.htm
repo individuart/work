@@ -3,7 +3,7 @@
 
 {% if categories is not empty %}
 <div class="work-categories">
-    <div class="work-category selected" id="cat-0">{{ 'all categories' |_}}</div>
+    <div class="work-category selected" id="cat-0">all categories</div>
     {% for cat in categories %}
     <div class="work-category" id="cat-{{cat.id}}">{{cat.name}}</div>
     {% endfor %}
@@ -19,7 +19,7 @@
                 <div class="work__infocell">
                     <h2 class="work__title">{{ work.name}}</h2>
                     <h3 class="work__subtitle">{{work.description}}</h3>
-                    <a href="#view-work/{{work.id}}/{{ work.slug }}" class="work__button">{{ 'view project'|_}}</a>
+                    <a href="#view-work/{{work.id}}/{{ work.slug }}" class="work__button">view project</a>
                 </div>
             </div>
     </div>
