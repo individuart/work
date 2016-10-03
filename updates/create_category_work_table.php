@@ -18,7 +18,7 @@ class CreateCategoryWorkTable extends Migration
 
     public function down()
     {
-        Schema::dropIfExists('individuart_work_caetgory_work');
+        Schema::dropIfExists('individuart_work_category_work');
     }
 
 }
