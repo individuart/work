@@ -12,7 +12,8 @@ columns:
     image:
       label: individuart.work::lang.backend.label_image
       sortable: no
-      type: image
+      type: partial
+      path: ~/plugins/individuart/work/models/work/partials/_image_column.htm
     sort_order:
       label: individuart.work::lang.backend.label_order
     published:
