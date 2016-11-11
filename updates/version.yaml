@@ -14,3 +14,6 @@
       - Add categories and category_work tables
       - create_categories_table.php
       - create_category_work_table.php
+1.1.1:
+      - Database maintenance.
+      - update_timestamp_nullable.php
