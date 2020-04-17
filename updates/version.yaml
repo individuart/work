@@ -1,19 +1,22 @@
 1.0.1:
-      - First version of Work & create works table
-      - create_works_table.php
+  - First version of Work & create works table
+  - create_works_table.php
 1.0.2:
-      - Add url field to works table
-      - add_url_works_table.php
+  - Add url field to works table
+  - add_url_works_table.php
 1.0.3:
-      - Add long description to works table
-      - add_long_desc_works_table.php
+  - Add long description to works table
+  - add_long_desc_works_table.php
 1.0.4:
-      - Add sort_order to works table
-      - add_sort_order_works_table.php
+  - Add sort_order to works table
+  - add_sort_order_works_table.php
 1.1.0:
-      - Add categories and category_work tables
-      - create_categories_table.php
-      - create_category_work_table.php
+  - Add categories and category_work tables
+  - create_categories_table.php
+  - create_category_work_table.php
 1.1.1:
-      - Database maintenance.
-      - update_timestamp_nullable.php
+  - Database maintenance.
+  - update_timestamp_nullable.php
+1.1.2:
+  - Update sortable fields to nullable
+  - update_sortable_fields_to_nullable.php
